@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.html",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack --mode production"
+  },
   "keywords": [],
   "author": "Łukasz Stankiewicz",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
 }
