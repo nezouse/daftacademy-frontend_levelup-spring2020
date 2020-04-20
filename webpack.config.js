@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -20,7 +21,7 @@ module.exports = {
         },
       },
       {
-        test: /\.scss$/,
+        test: /\.[sc]c?ss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
@@ -38,5 +39,6 @@ module.exports = {
       template: "./src/index.html",
       inject: true,
     }),
+    new CopyWebpackPlugin([{ from: "src/assets", to: "assets" }]),
   ],
 };

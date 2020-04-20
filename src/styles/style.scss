@@ -1,0 +1,280 @@
+$white: #ffffff;
+$black: #151515;
+$dark-grey-blue: #263a49;
+$brown-grey: #959595;
+$greyish-brown: #454545;
+
+html {
+  font-family: "Signika", sans-serif;
+  font-size: 10px;
+}
+
+.header {
+  height: 550px;
+  background-image: url("https://via.placeholder.com/1920x550");
+  background-position: center;
+  font-family: "Signika", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 4rem 10%;
+
+  &__bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 2.6rem;
+  }
+}
+
+.navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  justify-content: space-between;
+
+  &__item {
+    list-style: none;
+  }
+}
+
+.user-info {
+  display: flex;
+
+  &__button {
+    border: none;
+    background: transparent;
+  }
+
+  &__icon {
+    height: 1.8rem;
+  }
+
+  &__bag-counter {
+    font-size: 0.9rem;
+    color: $white;
+    padding: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background: #151515;
+    border-radius: 50%;
+    text-align: center;
+  }
+}
+
+.gallery {
+  width: 80%;
+  display: flex;
+  overflow: hidden;
+
+  &__section {
+    background-color: $dark-grey-blue;
+    display: flex;
+    height: 438px;
+  }
+
+  &__icon {
+    height: 48px;
+    margin: auto;
+  }
+
+  &__item {
+    height: 338px;
+    margin: auto 0;
+  }
+
+  * + * {
+    padding-left: 30px;
+  }
+}
+
+.new-arrivals {
+  padding: 5rem 10%;
+  display: grid;
+  gap: 30px 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  &__header {
+    font-size: 4.8rem;
+    grid-column: span 4;
+    justify-self: center;
+  }
+}
+
+.product {
+  &__container {
+    position: relative;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__on-sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+  }
+
+  &__header {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    padding-right: 4px;
+    transform: translate(0, -2px);
+  }
+
+  &__name {
+    color: $greyish-brown;
+    font-size: 1.3rem;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: inline-block;
+
+    &--old {
+      color: $brown-grey;
+      text-decoration: line-through;
+      padding-left: 5px;
+    }
+  }
+
+  &__description {
+    div + div {
+      margin-top: 12px;
+    }
+  }
+
+  &__all-products {
+    padding: 15px 30px;
+    background: white;
+    grid-column: span 4;
+  }
+}
+
+.featured {
+  max-width: 80%;
+  padding: 0 10%;
+
+  display: grid;
+  gap: 9px;
+  grid-template-columns: 28vw 1fr 1fr;
+  grid-template-rows: 16vw 16vw;
+  justify-items: stretch;
+
+  &__item {
+    height: 100%;
+    position: relative;
+
+    font-weight: 600;
+    color: $black;
+
+    &--vertical-2 {
+      grid-row: span 2;
+    }
+
+    &--horizontal-2 {
+      grid-column: span 2;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__description {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+
+  &__link {
+    font-size: 1.3rem;
+  }
+}
+
+.newsletter {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  &__header {
+    font-size: 30px;
+    font-weight: 600;
+    color: $black;
+  }
+
+  &__description {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  &__input-container {
+    display: inline-block;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  &__input {
+    display: inline-block;
+    border-bottom: 2px solid $black;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  &__field {
+    border: none;
+    width: 30vw;
+  }
+  &__label {
+    font-weight: 600;
+    padding: 0 10px;
+  }
+
+  &__footnote {
+  }
+}
+
+.footer {
+  margin: 20px 10%;
+  display: grid;
+  gap: 30px 0;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  &__row {
+    display: flex;
+
+    div + div {
+      margin-left: 20px;
+    }
+  }
+}
+
+.grid__element--center {
+  justify-self: center;
+}
+
+.grid__element--end {
+  justify-self: end;
+}
+
+.with-border {
+  border: $black 2px solid;
+  font-weight: 700;
+}
